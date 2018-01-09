@@ -1,0 +1,40 @@
+/* Typography */
+$base-font-family: sans-serif;
+
+$font-regular: 400;
+$font-bold: 700;
+
+$base-line-height: 1.8;
+$header-line-height: 1.2;
+
+$base-font-size: 1.2rem;
+
+$button-letter-spacing: .03125rem;
+
+/* Colors */
+$clear: rgba(0, 0, 0, 0);
+$blue: rgba(1, 0, 102, 1);
+$light-blue: rgba(0, 153, 255, 1);
+$yellow: rgba(243, 222, 44, 1);
+$red: rgba(255, 51, 0, 1);
+$black: rgba(26, 42, 52, 1);
+$black-80: rgba(26, 42, 52, .8);
+$grey: rgba(213, 213, 216, 1);
+$white: rgba(255, 255, 255, 1);
+
+$base-text-shadow: 3px 3px 6px rgba(0, 0, 0, .5);
+
+/* Buttons */
+$border-radius-base: .25rem;
+$border-white: 1px solid $white;
+$border-grey: 1px solid $grey;
+
+/* Animation */
+$base-duration: 300ms;
+$base-timing: ease;
+
+$transition-background-color: background-color $base-duration $base-timing;
+
+
+/* Alignment */
+$button-padding-base: .25rem 1rem;
