@@ -1,0 +1,19 @@
+body {
+  display: flex !important;
+}
+
+a {
+  display: none;
+  background-color: #abcdef;
+}
+
+
+body,
+a {
+  color: black;
+  margin: 1rem 2rem .5rem;
+}
+
+.blockBlock__elementElement {
+  display: none;
+}

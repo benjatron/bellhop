@@ -1,0 +1,54 @@
+{
+  "name": "bellhop",
+  "version": "0.1.0",
+  "description": "A starter theme for WordPress that does some of the lifting for you",
+  "main": "index.js",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjatron/bellhop.git"
+  },
+  "keywords": [
+    "wordpress"
+  ],
+  "author": "Ben Davidson",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/benjatron/bellhop/issues"
+  },
+  "homepage": "https://github.com/benjatron/bellhop#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.2.4",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.8",
+    "eslint": "^4.15.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-loader": "^1.9.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "node-sass": "^4.7.2",
+    "postcss-loader": "^2.0.10",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "stylelint": "^8.4.0",
+    "stylelint-webpack-plugin": "^0.9.0",
+    "uglifyjs-webpack-plugin": "^1.1.6",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {}
+}
