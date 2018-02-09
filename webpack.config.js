@@ -13,7 +13,9 @@ module.exports = {
     index: './assets/scripts/src/index.js',
   },
   plugins: [
-    new UglifyJSPlugin(),
+    new UglifyJSPlugin({
+      sourceMap: true
+    }),
     extractSass,
     new StyleLintPlugin({
       configFile: '.stylelintrc',
@@ -62,6 +64,15 @@ module.exports = {
             ],
             fallback: 'style-loader'
           })
+        },
+        {
+          test: /\.(ttf|eot|woff|woff2)$/,
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+            name: '[name].[ext]',
+            outputPath: '../../../assets/fonts/dist/',
+          }
         },
       ]
     }
