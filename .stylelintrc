@@ -1,4 +1,7 @@
 {
+  "plugins": [
+    "stylelint-scss"
+  ],
   "rules": {
     ## Possible Errors ##
 
@@ -41,7 +44,7 @@
     "media-feature-name-no-unknown": true,
 
     # At-rule
-    "at-rule-no-unknown": true,
+    "scss/at-rule-no-unknown": true,
 
     # Comment
     "comment-no-empty": true,
