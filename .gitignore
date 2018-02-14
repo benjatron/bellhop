@@ -57,3 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
+# system ds_store files
+.DS_Store
