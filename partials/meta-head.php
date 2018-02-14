@@ -4,6 +4,14 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <?php // Google site verification
+      if( get_field('webmaster_verification_code', 'option') ):
+    ?>
+      <meta name="google-site-verification" content="<?php the_field('webmaster_verification_code', 'option'); ?>" />
+    <?php
+      endif;
+    ?>
+
     <?php // Google Analytics integration
       if( get_field('googleAnalytics_id', 'option') ):
         $analytics_id = get_field('googleAnalytics_id', 'option');
