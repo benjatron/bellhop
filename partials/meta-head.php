@@ -12,16 +12,18 @@
       endif;
     ?>
 
-    <?php // Google Analytics integration
-      if( get_field('googleAnalytics_id', 'option') ):
-        $analytics_id = get_field('googleAnalytics_id', 'option');
+    <?php // Google Analytics
+      if( get_field('google_analytics_id', 'option') ):
+        $google_analytics_id = get_field('google_analytics_id', 'option');
     ?>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $google_analytics_id; ?>"></script>
       <script>
-        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-        ga('create', '<?php echo $analytics_id; ?>', 'auto');
-        ga('send', 'pageview');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '<?php echo $google_analytics_id; ?>');
       </script>
-      <script async src='https://www.google-analytics.com/analytics.js'></script>
     <?php
       endif;
     ?>
