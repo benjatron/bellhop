@@ -7,6 +7,7 @@ const extractSass = new ExtractTextPlugin({
   filename: '../../../assets/styles/dist/main.min.css'
 });
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const magicImporter = require('node-sass-magic-importer');
 
 module.exports = {
   entry: {
@@ -53,14 +54,13 @@ module.exports = {
                   sourceMap: true
                 }
               }, {
+                loader: 'postcss-loader'
+              }, {
                 loader: 'sass-loader',
                 options: {
-                  sourceMap: true
+                  importer: magicImporter()
                 }
-              }, {
-                loader: 'postcss-loader'
               }
-
             ],
             fallback: 'style-loader'
           })

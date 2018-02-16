@@ -1,0 +1,16 @@
+/**
+ * Sectioning Root
+ */
+
+html {
+  font-family: $base-font-family;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// body {}

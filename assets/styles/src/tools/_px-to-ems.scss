@@ -1,0 +1,18 @@
+/**
+ * Pixel to Em function, inspired by Chris Coyier's post on CSS Tricks:
+ * https://css-tricks.com/snippets/sass/px-to-em-functions/
+ */
+
+$em-size: 16 !default;
+
+@function em($pixels, $context: $em-size) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}

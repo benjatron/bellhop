@@ -1,9 +1,72 @@
 @charset 'utf-8';
 
-@import './1-settings/00-settings.scss';
-@import './2-tools/00-tools.scss';
-@import './3-generic/00-generic.scss';
-@import './4-elements/00-elements.scss';
-@import './5-objects/00-objects.scss';
-@import './6-components/00-components.scss';
-@import './7-trumps/00-trumps.scss';
+/**
+ * Vendor
+ * Third-Party styles, functions, and mixins
+ */
+// Bourbon
+@import '~bourbon/core/bourbon';
+
+// Modern Normalize
+@import '~modern-normalize/modern-normalize';
+
+/**
+ * Tools
+ * Globally accessible functions and mixins
+ */
+// Asset helper function
+@import './tools/asset-helper.scss';
+
+// BEM mixins
+@import './tools/bem.scss';
+
+// Mathematical constants
+@import './tools/constants.scss';
+
+// Material-style shadows
+@import './tools/material-shadows.scss';
+
+// Full-size overlay mixin
+@import './tools/overlay.scss';
+
+// Mathematical power function
+@import './tools/power.scss';
+
+// Pixel to em converter
+@import './tools/px-to-ems.scss';
+
+// Triangle generator
+@import './tools/triangles.scss';
+
+
+/**
+ * Settings
+ * Variables used throughout the theme
+ */
+@import './settings/variables.scss';
+
+
+/**
+ * Elements
+ * Styles applied to specific HTML elements
+ */
+@import './elements/content-sectioning.scss';
+@import './elements/forms.scss';
+@import './elements/image-multimedia.scss';
+@import './elements/inline-text-semantics.scss';
+@import './elements/sectioning-root.scss';
+@import './elements/table-content.scss';
+@import './elements/text-content.scss';
+
+
+/**
+ * Components
+ * Class- and ID-specific styles
+ */
+
+
+
+/**
+ * Overrides
+ * !important styles and those that override any third-party styling
+ */
