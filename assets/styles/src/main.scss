@@ -23,9 +23,6 @@
 // Mathematical constants
 @import './tools/constants.scss';
 
-// Material-style shadows
-@import './tools/material-shadows.scss';
-
 // Full-size overlay mixin
 @import './tools/overlay.scss';
 
@@ -41,9 +38,10 @@
 
 /**
  * Settings
- * Variables used throughout the theme
+ * Definitons and variables used throughout the theme. Colors, typography, etc.
  */
-@import './settings/variables.scss';
+@import './settings/colors.scss';
+@import './settings/fonts.scss';
 
 
 /**
@@ -63,7 +61,8 @@
  * Components
  * Class- and ID-specific styles
  */
-
+// WordPress editor styles
+@import './components/wp-core.scss';
 
 
 /**
