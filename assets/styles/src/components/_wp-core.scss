@@ -1,60 +1,37 @@
 /* WordPress Core */
-
-.alignnone {
+.alignnone,
+a img.alignnone,
+.alignleft,
+a img.alignleft,
+.wp-caption.alignnone,
+.wp-caption.alignleft {
   margin: 5px 20px 20px 0;
 }
 
 .aligncenter,
-div.aligncenter {
+div.aligncenter,
+a img.aligncenter {
   display: block;
-  margin: 5px auto;
+  margin: 5px auto 0;
 }
 
-.alignright {
-  float: right;
-  margin: 5px 0 20px 20px;
-}
-
-.alignleft {
-  float: left;
-  margin: 5px 20px 20px 0;
-}
-
+.alignright,
 a img.alignright {
   float: right;
   margin: 5px 0 20px 20px;
 }
 
-a img.alignnone {
-  margin: 5px 20px 20px 0;
-}
-
+.alignleft,
 a img.alignleft {
   float: left;
-  margin: 5px 20px 20px 0;
-}
-
-a img.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .wp-caption {
   background: #fff;
   border: 1px solid #f0f0f0;
   max-width: 96%;
-  /* Image does not overflow the content area */
   padding: 5px 3px 10px;
   text-align: center;
-}
-
-.wp-caption.alignnone {
-  margin: 5px 20px 20px 0;
-}
-
-.wp-caption.alignleft {
-  margin: 5px 20px 20px 0;
 }
 
 .wp-caption.alignright {
@@ -77,24 +54,27 @@ a img.aligncenter {
   padding: 0 4px 5px;
 }
 
+/* Text meant only for screen readers. */
 .screen-reader-text {
+  border: 0;
   clip: rect(1px, 1px, 1px, 1px);
-  position: absolute !important;
-  white-space: nowrap;
+  clip-path: inset(50%);
   height: 1px;
-  width: 1px;
+  margin: -1px;
   overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
 .screen-reader-text:focus {
-  background-color: #f1f1f1;
-  border-radius: 3px;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
+  background-color: #eee;
   clip: auto !important;
-  color: #21759b;
+  clip-path: none;
+  color: #444;
   display: block;
-  font-size: .875rem;
-  font-weight: bold;
+  font-size: 1em;
   height: auto;
   left: 5px;
   line-height: normal;
