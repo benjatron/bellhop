@@ -1,7 +1,7 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 
-  <?php get_template_part('partials/meta', 'head'); ?>
+  <?php get_template_part('partials/meta/head'); ?>
 
   <body <?php body_class('general'); ?>>
 
