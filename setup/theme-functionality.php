@@ -52,3 +52,8 @@ if( function_exists('acf_add_options_page') ) {
   ));
 
 }
+
+// Simplified partials integration for cleaner markup
+function get_partial( $slug ) {
+  return include(locate_template('partials/' . $slug . '.php'));
+}
