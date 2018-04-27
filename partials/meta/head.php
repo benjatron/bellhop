@@ -1,13 +1,20 @@
-<?php // Metatags and other links for the <head> area of the page ?>
+<?php
+/**
+ * Metatags and other links for the <head> area of the page
+ *
+ * Includes basic meta markup as well as Google site certification, tag manager, and TypeKit before calling
+ * the wp_head() function;
+ */
+?>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <?php // Google site verification
-    if( get_field('webmaster_verification_code', 'option') ):
+    if( get_field('google_site_verification_id', 'option') ):
   ?>
-    <meta name="google-site-verification" content="<?php the_field('webmaster_verification_code', 'option'); ?>" />
+    <meta name="google-site-verification" content="<?php the_field('google_site_verification_id', 'option'); ?>" />
   <?php
     endif;
   ?>
