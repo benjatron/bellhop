@@ -1,6 +1,5 @@
 /**
- * Asset helper, inspired by Hugo Giraudel's post on CSS Tricks:
- * https://css-tricks.com/snippets/sass/simple-asset-helper-functions/
+ * Asset helper functions
  */
 
 /// Base path for assets (fonts, images...),
@@ -9,29 +8,46 @@
 /// @type String
 $asset-base-path: '../../../assets' !default;
 
-/// Asset URL builder
-/// @access private
-/// @param {String} $type - Asset type, matching folder name
-/// @param {String} $file - Asset file name, including extension
-/// @return {URL} - A `url()` function leading to the asset
-@function asset($type, $file) {
-  @return url($asset-base-path + '/' + $type + '/src/' + $file);
+
+/// Path for included font files
+/// @public
+/// @type String
+$font-src-path: $asset-base-path + '/fonts/src/' !default;
+
+@function woff( $family, $file ) {
+  @return ( $font-src-path + $family + '/' + $file + '.woff' );
 }
 
-/// Image asset helper
-/// @access public
-/// @param {String} $file - Asset file name, including extension
-/// @return {URL} - A `url()` function leading to the image
-/// @require {function} asset
-@function image($file) {
-  @return asset('images', $file);
+@function woff2( $family, $file ) {
+  @return ( $font-src-path + $family + '/' + $file + '.woff2' );
 }
 
-/// Font asset helper
-/// @access public
-/// @param {String} $file - Asset file name, including extension
-/// @return {URL} - A `url()` function leading to the font
-/// @require {function} asset
-@function font($file) {
-  @return asset('fonts', $file);
+@mixin font( $family, $file ) {
+  font-family: quote($family);
+  src:
+    local( $file ),
+    url( woff2( $family, $file ) ) format('woff2'),
+    url( woff( $family, $file ) ) format('woff');
+}
+
+
+/// Path for included image assets
+/// @public
+/// @type String
+$image-base-path: ($asset-base-path + '/images/src/') !default;
+
+@function gif( $file ) {
+  @return ( $image-base-path + 'gif/' + $file + '.gif' );
+}
+
+@function jpg( $file ) {
+  @return ( $image-base-path + 'jpg/' + $file + '.jpg' );
+}
+
+@function png( $file ) {
+  @return ( $image-base-path + 'png/' + $file + '.png' );
+}
+
+@function svg( $file ) {
+  @return ( $image-base-path + 'svg/' + $file + '.svg' );
 }
