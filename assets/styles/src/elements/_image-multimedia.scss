@@ -2,6 +2,13 @@
  * Image and Multimedia
  */
 
+img,
+video,
+audio {
+  height: auto;
+  max-width: 100%;
+}
+
 // area {}
 // audio {}
 // img {}

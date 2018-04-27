@@ -2,10 +2,19 @@
  * Forms
  */
 
+label,
+button,
+input,
+select {
+  cursor: pointer;
+}
+
+// ##{$all-buttons} {}
 // button {}
 // datalist {}
 // fieldset {}
 // form {}
+// #{$all-text-inputs} {}
 // input {}
 // label {}
 // legend {}

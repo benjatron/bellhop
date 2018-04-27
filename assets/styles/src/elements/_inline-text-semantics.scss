@@ -3,7 +3,9 @@
  */
 
 a {
+  color: inherit;
   text-decoration: none;
+  transition: color $base-duration $base-timing;
 }
 
 // abbr {}
