@@ -7,7 +7,8 @@ $setup_includes = [
   'setup/menus.php',                    // Menu setup
   'setup/post-types.php',               // Custom post types
   'setup/sidebars.php',                 // Sidebars
-  'setup/theme-functionality.php'       // Theme-specific functionality
+  'setup/taxonomies.php',               // Taxonomies
+  'setup/theme-functionality.php',      // Theme-specific functionality
 ];
 foreach( $setup_includes as $file ) {
   if (!$filepath = locate_template($file)) {
