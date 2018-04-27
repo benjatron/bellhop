@@ -2,4 +2,8 @@
 import '../../styles/src/main.scss';
 'use strict';
 
-// Start writing JS here
+// Global JS imports and settings
+import './vendor/lazysizes.js';
+import './vendor/jquery-globals.js';
+
+// Module-level scripts
