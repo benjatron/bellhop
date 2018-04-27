@@ -1,0 +1,9 @@
+// Preload style for off-screen loading
+@mixin preload() {
+  position: absolute;
+  left: -10000px;
+}
+
+.--preload {
+  @include preload;
+}
