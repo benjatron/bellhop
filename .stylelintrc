@@ -100,9 +100,6 @@
     # Unit
     "unit-case": "lower",
 
-    # Value
-    "value-keyword-case": "lower",
-
     # Value list
     "value-list-max-empty-lines": 0,
 
