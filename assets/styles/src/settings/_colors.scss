@@ -1,10 +1,16 @@
-/* Colors used in the theme */
-$clear: rgba(0, 0, 0, 0);
-$blue: rgba(1, 0, 102, 1);
-$light-blue: rgba(0, 153, 255, 1);
-$yellow: rgba(243, 222, 44, 1);
-$red: rgba(255, 51, 0, 1);
-$black: rgba(26, 42, 52, 1);
-$black-80: rgba(26, 42, 52, .8);
-$grey: rgba(213, 213, 216, 1);
+/* Standard colors and those used in the theme */
+$black: rgba(0, 0, 0, 1);
+$black-15: rgba(0, 0, 0, .15);
+$black-25: rgba(0, 0, 0, .25);
+$black-50: rgba(0, 0, 0, .5);
+$black-75: rgba(0, 0, 0, .75);
 $white: rgba(255, 255, 255, 1);
+
+$clear-black: rgba(0, 0, 0, 0);
+$clear-white: rgba(255, 255, 255, 0);
+
+// Social media-related colors
+$color-facebook: rgba(#3b5998, 1);
+$color-googleplus: rgba(#db4437, 1);
+$color-linkedin: rgba(#0077b5, 1);
+$color-twitter: rgba(#1da1f2, 1);
