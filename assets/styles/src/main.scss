@@ -20,8 +20,14 @@
 // BEM mixins
 @import './tools/bem.scss';
 
+// Clearfix hack
+@import './tools/clearfix.scss';
+
 // Mathematical constants
 @import './tools/constants.scss';
+
+// List style resets
+@import './tools/list-reset.scss';
 
 // Full-size overlay mixin
 @import './tools/overlay.scss';
@@ -29,11 +35,11 @@
 // Mathematical power function
 @import './tools/power.scss';
 
-// Pixel to em converter
-@import './tools/px-to-ems.scss';
+// Preloader mixin
+@import './tools/preload.scss';
 
-// Triangle generator
-@import './tools/triangles.scss';
+// Pixel to rem converter
+@import './tools/px-to-rems.scss';
 
 // Unit stripper
 @import './tools/unit-stripper.scss';
@@ -43,6 +49,7 @@
  * Settings
  * Definitons and variables used throughout the theme. Colors, typography, etc.
  */
+@import './settings/animation.scss';
 @import './settings/colors.scss';
 @import './settings/fonts.scss';
 
@@ -65,10 +72,22 @@
  * Class- and ID-specific styles
  */
 // WordPress editor styles
-@import './components/wp-core.scss';
+@import './vendor/wp-core.scss';
+
+// Atoms
+
+// Molecules
+
+// Organisms
+
+// Tempaltes
 
 
 /**
  * Overrides
  * !important styles and those that override any third-party styling
  */
+// Gravity Forms overrides
+@import './overrides/gravity-forms.scss';
+// lazysizes addons
+@import './overrides/lazysizes.scss';
