@@ -33,7 +33,7 @@ module.exports = {
   module: {
       loaders: [
         {
-          test: /\.js$/,
+          test: /\.js$/, // JavaScript settings
           exclude: /(node_modules)/,
           use: {
             loader: 'babel-loader',
@@ -44,7 +44,7 @@ module.exports = {
           }
         },
         {
-          test: /\.scss$/,
+          test: /\.scss$/, // SCSS settings
           use: extractSass.extract({
             use: [
               {
@@ -63,16 +63,55 @@ module.exports = {
               }
             ],
             fallback: 'style-loader'
-          })
+          }),
         },
         {
-          test: /\.(ttf|eot|woff|woff2)$/,
+          test: /\.(ttf|eot|woff|woff2)$/, // Font settings
           loader: 'file-loader',
           options: {
-            limit: 8192,
             name: '[name].[ext]',
-            outputPath: '../../../assets/fonts/dist/',
+            outputPath: '../../../assets/fonts/dist',
           }
+        },
+        {
+          test: /\.(gif)$/, // GIF settings
+          use: [{
+              loader: 'file-loader',
+              options: {
+                  name: '[name].[ext]',
+                  outputPath: '../../../assets/images/dist/gif',
+              }
+          }]
+        },
+        {
+          test: /\.(png)$/, // PNG settings
+          use: [{
+              loader: 'file-loader',
+              options: {
+                  name: '[name].[ext]',
+                  outputPath: '../../../assets/images/dist/png',
+              }
+          }]
+        },
+        {
+          test: /\.(jp(e*)g)$/, // JPEG settings
+          use: [{
+              loader: 'file-loader',
+              options: {
+                  name: '[name].[ext]',
+                  outputPath: '../../../assets/images/dist/jpg',
+              }
+          }]
+        },
+        {
+          test: /\.(svg)$/, // SVG settings
+          use: [{
+              loader: 'file-loader',
+              options: {
+                  name: '[name].[ext]',
+                  outputPath: '../../../assets/images/dist/svg',
+              }
+          }]
         },
       ]
     }
