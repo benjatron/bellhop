@@ -1,27 +1,31 @@
 <?php
-
 function bellhop_image_sizes() {
   // Enable post thumbnails
   // http://codex.wordpress.org/Post_Thumbnails
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // http://codex.wordpress.org/Function_Reference/add_image_size
+  // Uses data from http://gs.statcounter.com/screen-resolution-stats/desktop-mobile-tablet/worldwide
   add_theme_support('post-thumbnails');
-  add_image_size('4400px wide', 4400);
-  add_image_size('3600px wide', 3600);
-  add_image_size('2800px wide', 2800);
-  add_image_size('2200px wide', 2200);
-  add_image_size('1920px wide', 1920);
-  add_image_size('1540px wide', 1540);
-  add_image_size('1360px wide', 1360);
-  add_image_size('1280px wide', 1280);
-  add_image_size('1100px wide', 1100);
-  add_image_size('800px wide', 800);
-  add_image_size('640px wide', 640);
-  add_image_size('480px wide', 480);
-  add_image_size('360px wide', 360);
-  add_image_size('240px wide', 240);
-  add_image_size('160px wide', 160);
-  add_image_size('preload', 64);
-
+  add_image_size('preload', 64, 9999);
+  add_image_size('128w', 128, 9999);
+  add_image_size('240w', 240, 9999);
+  add_image_size('320w', 320, 9999);
+  add_image_size('360w', 360, 9999);
+  add_image_size('375w', 375, 9999);
+  add_image_size('480w', 480, 9999);
+  add_image_size('540w', 540, 9999);
+  add_image_size('640w', 640, 9999);
+  add_image_size('720w', 720, 9999);
+  add_image_size('768w', 768, 9999);
+  add_image_size('800w', 800, 9999);
+  add_image_size('960w', 960, 9999);
+  add_image_size('1024w', 1024, 9999);
+  add_image_size('1280w', 1280, 9999);
+  add_image_size('1366w', 1366, 9999);
+  add_image_size('1440w', 1366, 9999);
+  add_image_size('1600w', 1600, 9999);
+  add_image_size('1920w', 1920, 9999);
+  add_image_size('2560w', 2560, 9999);
+  add_image_size('3840w', 3840, 9999);
 }
 add_action( 'after_setup_theme', 'bellhop_image_sizes' );
